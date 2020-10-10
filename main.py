@@ -3,14 +3,19 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from pynput import keyboard
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def press_callback(key):
+    pass
+    print(key)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def release_callback(key):
+    pass
+    # print(event.name)
+
+
+l = keyboard.Listener(on_press=press_callback, on_release=pass)
+l.start()
+l.join()
